@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+post '/webhook' => 'webhooks#webhook'
+get '/show' => 'webhooks#show'
   def show
     @webhooks = Webhook.all
     render 'show.html.erb'
